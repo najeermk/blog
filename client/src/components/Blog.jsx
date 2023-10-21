@@ -44,7 +44,7 @@ useEffect(() => {
       { blog && (
         <article>
           <h2>{ blog.title }</h2>
-          <div>{ blog.body }</div>
+          <div>{ blog.desc }</div>
           <Link to="/"><button>Back</button></Link>
           <button onClick={handleClick}>delete</button>
         </article>

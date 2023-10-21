@@ -3,12 +3,12 @@ import { useHistory } from "react-router-dom";
 
 const CreateBlog = () => {
   const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [desc, setDesc] = useState('');
   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = { title, body };
+    const blog = { title, desc };
 
     fetch('http://localhost:8000/blogs/', {
       method: 'POST',
@@ -33,8 +33,8 @@ const CreateBlog = () => {
         <label>Blog body:</label>
         <textarea
           required
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
         ></textarea>
         
         <button>Add Blog</button>
